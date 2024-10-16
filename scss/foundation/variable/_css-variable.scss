@@ -1,0 +1,37 @@
+:root {
+  // 色の設定
+  --color_key: #e5152f;
+  --color_key_thin: #f3d2da;
+  --color_accent: #033254;
+  --color_accent_thin: #deedf7;
+  --color_accent2: #de3084;
+  --color_accent3: #559bdc;
+  --color_bg1: #f9f8f8;
+  --color_bg2: #edeff0;
+  --color_gray1: #e3e3e3;
+  --color_gray2: #787878;
+  --color_gray3: #ededed;
+  --color_gray4: #c7c7c7;
+  --color_border: #c7c7c7;
+  --color_label_blue: #19bee0;
+  --color_label_green: #5ad6c6;
+  --color_sat: #559bdc;
+  --color_sun: #de3084;
+
+  // フォント設定
+  // --ff-base: yu-gothic-pr6n, sans-serif;
+  --ff-base: "Noto Sans JP", sans-serif;
+  --ff-m-plus: "M PLUS Rounded 1c", sans-serif;
+  --ff-en: "Roboto", sans-serif;
+  --ff-yu-mincho: yu-mincho-pr6n, sans-serif;
+
+  // コンテンツ余白
+  --contents-space: 144px;
+
+  @media (max-width: 820px) {
+    --contents-space: 56px;
+  }
+
+  // ナビゲーション高さ（スマホ）
+  --nav_height: 120px;
+}

@@ -1,0 +1,17 @@
+@use "../../import" as var;
+
+.u-marker {
+  display: inline;
+  line-height: 1.3;
+  background: linear-gradient(transparent 0%, #fff 0%);
+
+  &--dotted {
+    display: inline;
+    line-height: 2;
+    background-image:
+    radial-gradient(var(--color_accent) 40%, transparent 40%);
+    background-repeat: repeat-x;
+    background-size: 8px 8px;
+    background-position: bottom 0 left 0;
+  }
+}

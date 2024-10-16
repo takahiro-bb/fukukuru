@@ -1,0 +1,7 @@
+@use "../../import" as var;
+
+.u-td {
+  &--underline {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,21 @@
+@use "../../import" as var;
+
+.u-bg {
+  &-color {
+    &--gray {
+      padding-block: calc(var(--contents-space) * 2);
+      margin-bottom: calc(var(--contents-space) * 2);
+      background-color: var(--color_bg);
+
+      @include var.mq(max, sp) {
+        padding-block: calc(var(--contents-space) / 2);
+        margin-bottom: calc(var(--contents-space) / 2);
+      }
+
+      & + & {
+        padding-top: 0;
+        margin-top: calc(var(--contents-space) * -1);
+      }
+    }
+  }
+}

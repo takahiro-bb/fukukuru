@@ -1,0 +1,108 @@
+@use "../../import" as var;
+
+.u-fs {
+  &--12 {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  &--12_21 {
+    font-size: var.fs(12, 21);
+    line-height: 1.4;
+  }
+
+  &--13 {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  &--13_14 {
+    font-size: var.fs(13, 14);
+  }
+
+  &--13_15 { //本文
+    font-size: var.fs(13, 15);
+  }
+
+  &--14 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  &--14_13 {
+    font-size: var.fs(14, 13);
+  }
+
+  &--14_15 {
+    font-size: var.fs(14, 15);
+  }
+
+  &--14_16 {
+    font-size: var.fs(14, 16);
+  }
+
+  &--14_20 {
+    font-size: var.fs(14, 20);
+  }
+
+  &--15 {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  &--15_18 {
+    font-size: var.fs(15, 18);
+  }
+
+  &--16_18 {
+    font-size: var.fs(16, 18);
+  }
+  
+  &--17 {
+    font-size: 17px;
+  }
+
+  &--20 {
+    font-size: 20px;
+  }
+
+  &--24 {
+    font-size: 24px;
+  }
+
+  &--30_42 {
+    font-size: var.fs(30, 42);
+  }
+
+  &--32 {
+    font-size: 32px;
+  }
+
+  &--42 {
+    font-size: 42px;
+  }
+
+  &--42_70 {
+    font-size: var.fs(42, 70);
+  }
+
+  &--43_60 {
+    font-size: var.fs(43, 60);
+  }
+
+}
+
+[class*="u-fs--"] {
+  font-weight: 500;
+  transform: rotate(0.05deg);
+}
+
+.u-number--big {
+  font-size: var.fs(20, 22);
+}
+
+.u-event-ttl {
+  font-size: var.fs(20, 22);
+  font-weight: 700;
+}

@@ -1,0 +1,7 @@
+@use "../../import" as var;
+
+.u-ff {
+  &--en {
+    font-family: var(--ff-en);
+  }
+}

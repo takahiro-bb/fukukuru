@@ -1,0 +1,9 @@
+@use "../../import" as var;
+
+.u-scroll-box {
+  @include var.mq(max, sp) {
+    width: calc(100vw - 32px);
+    padding-inline: 16px;
+    overflow-x: auto;
+  }
+}

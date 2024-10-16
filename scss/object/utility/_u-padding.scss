@@ -1,0 +1,67 @@
+@use "../../import" as var;
+
+.u-p {
+  &x--{
+    &8 {
+      padding-inline: 8px;
+    }
+
+    &16_0 {
+      padding-inline: 0;
+
+      @include var.mq(max, tb_min) {
+        padding-inline: 16px;
+      }
+    }
+
+    &24_0 {
+      padding-inline: 0;
+
+      @include var.mq(max, tb) {
+        padding-inline: 24px;
+      }
+    }
+
+    &40 {
+      padding-inline: 40px;
+    }
+
+    &56 {
+      padding-inline: 56px;
+    }
+
+    @include var.mq(max, tb) {
+      &tb-{
+        &0 {
+          padding-inline: 0;
+        }
+
+        &40 {
+          padding-inline: 40px;
+        }
+      }
+    }
+
+    @include var.mq(max, sp) {
+      &sp-{
+        &0 {
+          padding-inline: 0;
+        }
+
+        &16 {
+          padding-inline: 16px;
+        }
+      }
+    }
+  }
+
+  &y--{
+    &0_80 {
+      padding-block: 80px;
+
+      @include var.mq(max, sp) {
+        padding-block: 0;
+      }
+    }
+  }
+}

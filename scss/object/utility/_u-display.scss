@@ -1,0 +1,67 @@
+@use "../../import" as var;
+
+.u-d {
+  &-sp {
+    &--on {
+      display: none !important;
+
+      @include var.mq(max, sp) {
+        display: block !important;
+     }
+    }
+
+    &--off {
+      display: block !important;
+
+      @include var.mq(max, sp) {
+        display: none !important;
+      }
+    }
+  }
+
+  &-tb_min {
+    &--on {
+      display: none;
+
+      @include var.mq(max, tb_min) {
+        display: block;
+
+        &.p-header__btnNav {
+          display: flex;
+        }
+      }
+    }
+
+    &--off {
+      display: block;
+
+      @include var.mq(max, tb_min) {
+        display: none;
+      }
+    }
+  }
+
+  &-tb {
+    &--on {
+      display: none;
+
+      @include var.mq(max, tb) {
+        display: block;
+      }
+
+      @media (max-width: 1500px) {
+        &.p-header__btnNav {
+          display: flex;
+        }
+      }
+    }
+
+    &--off {
+      display: block;
+
+      @include var.mq(max, tb) {
+        display: none;
+      }
+    }
+  }
+}

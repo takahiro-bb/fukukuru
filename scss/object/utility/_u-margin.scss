@@ -1,0 +1,153 @@
+@use "../../import" as var;
+
+.u-m {
+  &x--auto {
+    margin-inline: auto;
+  }
+  
+  &y--{
+    &16 {
+      margin-block: 16px;
+    }
+  }
+
+  &r--{
+    &0_a {
+      margin-right: auto;
+
+      @include var.mq(max, sp) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &b--{
+    &0 {
+      margin-bottom: 0;
+    }
+    &8 {
+      margin-bottom: 8px;
+    }
+    &14 {
+      margin-bottom: 14px;
+    }
+
+    &16 {
+      margin-bottom: 16px;
+    }
+
+    &16_24 {
+      margin-bottom: 24px;
+
+      @include var.mq(max, sp) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &18 {
+      margin-bottom: 18px;
+    }
+
+    &24 {
+      margin-bottom: 24px;
+    }
+
+    &24_32 {
+      margin-bottom: 32px;
+
+      @include var.mq(max, sp) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &24_96 {
+      margin-bottom: 96px;
+
+      @include var.mq(max, sp) {
+        margin-bottom: 24px;
+      }
+    }
+
+    &32 {
+      margin-bottom: 32px;
+    }
+
+    &32_40 {
+      margin-bottom: 40px !important;
+
+      @include var.mq(max, sp) {
+        margin-bottom: 32px !important;
+      }
+    }
+
+    &32_48 {
+      margin-bottom: 48px !important;
+
+      @include var.mq(max, sp) {
+        margin-bottom: 32px !important;
+      }
+    }
+
+    &32_64 {
+      margin-bottom: 64px !important;
+
+      @include var.mq(max, sp) {
+        margin-bottom: 32px !important;
+      }
+    }
+
+    &36_72 {
+      margin-bottom: 72px !important;
+
+      @include var.mq(max, sp) {
+        margin-bottom: 36px !important;
+      }
+    }
+
+    &40 {
+      margin-bottom: 40px;
+    }
+
+    &40_64 {
+      margin-bottom: 64px;
+
+      @include var.mq(max, sp) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &40_80 {
+      margin-bottom: 80px;
+
+      @include var.mq(max, sp) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &48 {
+      margin-bottom: 48px;
+    }
+
+    &48_96 {
+      margin-bottom: 96px;
+
+      @include var.mq(max, sp) {
+        margin-bottom: 48px;
+      }
+    }
+
+    &60_120 {
+      margin-bottom: 120px;
+
+      @include var.mq(max, sp) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &l--{
+    &m8 {
+      margin-left: -8px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+$breakpoints: (
+  // full HD
+  hd: 1920,
+  // PC
+  pc: 1280px,
+  // タブレット
+  tb: 1024px,
+  // タブレット小さめ
+  tb_min: 820px,
+  // スマホ
+  sp: 600px,
+  // スマホ小さめ
+  sp_min: 360px
+) !default;
+
+@mixin mq($type, $bp1, $bp2: 0) {
+  @if  $type == min {
+    $width: map-get($breakpoints, $bp1);
+    $width: $width + 1px;
+
+    @media screen and (min-width: #{$width}) {
+      @content;
+    }
+  } @else if $type == max {
+    @media screen and (max-width: #{map-get($breakpoints, $bp1)}) {
+      @content;
+    }
+  } @else if $type == bw {
+    // bw → between
+    $width: map-get($breakpoints, $bp2);
+    $width: $width + 1px;
+
+    @media screen and (max-width: #{map-get($breakpoints, $bp1)})
+      and (min-width: #{$width}) {
+      @content;
+    }
+  }
+}
+
+
+//デバイスが横向きかつ1024px以上の場合の記述
+// @mixin queryTb-L {
+//   @media screen and (orientation: landscape) and (min-width: ($tb)) {
+//     height: -Webkit-fill-available;
+//   }
+// }

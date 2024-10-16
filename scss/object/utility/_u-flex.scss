@@ -1,0 +1,58 @@
+@use "../../import" as var;
+
+.u-flex {
+  &__box {
+    display: flex;
+    gap: 140px 40px;
+    flex-wrap: wrap;
+
+    @include var.mq(max, sp) {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &.is-gap--16 {
+      gap: 16px;
+
+      > div {
+        width: calc((100% - 16px) / 2);
+
+        > img  {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &--sb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: calc(50% - 20px);
+
+    @include var.mq(max, sp) {
+      width: 100%;
+    }
+
+    &.w100 {
+      width: 100%;
+    }
+
+    ol, ul {
+      padding-left: 40px;
+      list-style: initial;
+
+      @include var.mq(max, sp) {
+        padding-inline: 24px;
+      }
+
+      li {
+        font-size: var.fs(14, 14);
+        line-height: 2;
+      }
+    }
+  }
+}

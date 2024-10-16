@@ -1,0 +1,19 @@
+@use "../../import" as var;
+
+.u-font {
+  &__title {
+    font-family: Noto Sans JP;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0.02em;
+
+    @include var.mq(max, tb) {
+      font-family: Noto Sans JP;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 40px;
+      text-align: left;
+    }
+  }
+}

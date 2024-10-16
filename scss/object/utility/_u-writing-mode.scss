@@ -1,0 +1,15 @@
+@use "../../import" as var;
+
+.u-wm {
+  &--tb {
+    writing-mode: vertical-rl;
+
+    &_sp {
+      @include var.mq(max, sp) {
+        padding-right: 16px;
+        writing-mode: vertical-rl;
+        white-space: pre;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@use "../../import" as var;
+
+.u-color {
+  &--key {
+    color: var(--color_key);
+  }
+
+  &--accent {
+    color: var(--color_accent);
+  }
+
+  &--white {
+    color: #fff;
+  }
+
+  &--red {
+    color: #f00;
+  }
+
+  &--gray2 {
+    color: var(--color_gray2);
+  }
+
+  &--gray4 {
+    color: var(--color_gray4);
+  }
+
+  &--sat {
+    color: var(--color_sat);
+  }
+
+  &--sun {
+    color: var(--color_sun);
+  }
+}

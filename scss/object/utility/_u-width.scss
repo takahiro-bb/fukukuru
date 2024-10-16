@@ -1,0 +1,8 @@
+@use "../../import" as var;
+
+.u-w {
+  &--100 {
+    width: 100% !important;
+    max-width: initial !important;
+  }
+}
