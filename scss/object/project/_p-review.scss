@@ -1,0 +1,74 @@
+@use "../../import" as var;
+
+.p-review {
+ &__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px
+ }
+
+ &__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: calc((100% - 48px) / 3);
+  padding: 16px;
+  border: 1px solid var(--color-border);
+ }
+
+ &__heading {
+  padding-bottom: 4px;
+  font-size: var.fs(15, 16);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-border);
+ }
+
+ &__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+ }
+
+ &-term {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+   margin-inline: 8px 4px;
+  }
+ }
+
+ &__description {
+  font-size: 12px;
+
+  &.is-sp-gray {
+   @include var.mq(max, sp) {
+    font-size: 11px;
+   }
+
+   .fa {
+    margin-right: 4px;
+    font-size: 16px;
+    color: #b4b4b4;
+   }
+  }
+ }
+
+ &-evaluation {
+  &__list {
+   display: flex;
+   color: #fe9C00;
+  }
+ }
+
+ &--fav {
+  &-count {
+   margin-left: 8px;
+   color: #fa6180;
+  }
+ }
+}

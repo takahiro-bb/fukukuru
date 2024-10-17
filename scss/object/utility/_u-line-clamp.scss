@@ -1,6 +1,10 @@
 @use "../../import" as var;
 
 .u-line-clamp {
+  &--1 {
+    -webkit-line-clamp: 1;
+  }
+
   &--2 {
     -webkit-line-clamp: 2;
   }
