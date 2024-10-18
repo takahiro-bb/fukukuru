@@ -135,7 +135,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 256px;
+  width: 100%;
+  max-width: 256px;
   height: 48px;
   padding: 10px;
   margin-top: 0;
@@ -155,6 +156,14 @@
 .c-btn.is-fav-btn.is-checked::before {
   content: "お気に入りに追加済み";
   color: #fff;
+}
+.p-searchResultsSide .c-btn.is-fav-btn {
+  max-width: 152px;
+  height: 30px;
+  margin-bottom: 32px;
+}
+.p-searchResultsSide .c-btn.is-fav-btn::before {
+  font-size: 12px;
 }
 
 .c-category__list {
@@ -237,6 +246,11 @@ a:hover {
   animation: displayAnime cubic-bezier(0.23, 1, 0.32, 1) 0.8s forwards;
 }
 
+@media (min-width: 601px) {
+  .p-searchResultsSection {
+    justify-content: space-between;
+  }
+}
 .p-coupon__list {
   display: flex;
   flex-wrap: wrap;
@@ -256,6 +270,9 @@ a:hover {
     display: flex;
     width: 100%;
   }
+}
+.is-shop .p-coupon__item {
+  width: calc((100% - 48px) / 3);
 }
 @media screen and (max-width: 600px) {
   .p-coupon__item a:not(.c-btn) {
@@ -542,6 +559,10 @@ a:hover {
     width: 100%;
   }
 }
+.is-shop .p-review__item {
+  align-items: flex-start;
+  width: 100%;
+}
 .p-review__heading {
   padding-bottom: 4px;
   font-size: clamp(15px, 2.5vw, 16px);
@@ -557,6 +578,11 @@ a:hover {
   .p-review__heading {
     padding-bottom: 4px;
   }
+}
+.is-shop .p-review__heading {
+  width: 100%;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 .p-review__info {
   display: flex;
@@ -593,6 +619,33 @@ a:hover {
 .p-review--fav-count {
   margin-left: 8px;
   color: #fa6180;
+}
+.is-shop .p-review--fav-count {
+  padding: 4px 8px;
+  margin-inline: 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+}
+.p-review--fav-count--no {
+  margin-left: 4px;
+}
+
+.p-shop__heading {
+  font-size: clamp(15px, 2.5vw, 25px);
+  font-weight: 700;
+}
+.p-shop__heading-box {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #000;
+}
+.p-shop__heading-box + .p-searchResults__sort {
+  margin-top: 0;
 }
 
 .u-bg-color--gray {
@@ -716,6 +769,11 @@ a:hover {
 }
 .u-flex__box.is-gap--16 > div > img {
   max-width: 100%;
+}
+.u-flex--ed {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .u-flex--sb {
   display: flex;

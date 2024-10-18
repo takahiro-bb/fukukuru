@@ -1,0 +1,21 @@
+@use "../../import" as var;
+
+.p-shop {
+ &__heading {
+  font-size: var.fs(15, 25);
+  font-weight: 700;
+
+  &-box {
+   display: flex;
+   align-items: baseline;
+   gap: 16px;
+   width: 100%;
+   margin-bottom: 16px;
+   border-bottom: 1px solid #000;
+
+   + .p-searchResults__sort {
+    margin-top: 0;
+   }
+  }
+ }
+}

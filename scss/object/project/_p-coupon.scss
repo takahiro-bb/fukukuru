@@ -20,6 +20,10 @@
    width: 100%;
   }
 
+  .is-shop & {
+   width: calc((100% - 48px) / 3);
+  }
+
   a:not(.c-btn) {
    @include var.mq(max, sp) {
     display: block;

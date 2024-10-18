@@ -65,7 +65,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 256px;
+    width: 100%;
+    max-width: 256px;
     height: 48px;
     padding: 10px;
     margin-top: 0;
@@ -86,6 +87,16 @@
       &::before {
         content: "お気に入りに追加済み";
         color: #fff;
+      }
+    }
+
+    .p-searchResultsSide & {
+      max-width: 152px;
+      height: 30px;
+      margin-bottom: 32px;
+
+      &::before {
+        font-size: 12px;
       }
     }
   }

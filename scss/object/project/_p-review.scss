@@ -19,6 +19,11 @@
   @include var.mq(max, sp) {
    width: 100%;
   }
+
+  .is-shop & {
+   align-items: flex-start;
+   width: 100%;
+  }
  }
 
  &__heading {
@@ -33,6 +38,12 @@
 
   @include var.mq(max, sp) {
    padding-bottom: 4px;
+  }
+
+  .is-shop & {
+   width: 100%;
+   padding-bottom: 0;
+   border-bottom: none;
   }
  }
 
@@ -81,6 +92,19 @@
   &-count {
    margin-left: 8px;
    color: #fa6180;
+
+   .is-shop & {
+    padding: 4px 8px;
+    margin-inline: 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+   }
+
+   &--no {
+    margin-left: 4px;
+   }
   }
  }
 }
