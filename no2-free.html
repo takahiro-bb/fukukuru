@@ -1,0 +1,237 @@
+<style>
+ <style>.ju-top-menu-box {
+  height: 80px;
+  background: #fc0025;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: -50px;
+ }
+
+ .ju-top-menu-box__inner+.ju-top-menu-box__inner {
+  margin-left: 40px;
+ }
+
+ .ju-top-menu-box a {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  border-bottom: 5px solid #fc0025;
+  padding-top: 5px;
+  font-weight: bold;
+  flex-direction: column;
+ }
+
+ .ju-top-menu-box a:hover {
+  border-bottom: 5px solid #FFF;
+ }
+
+ .ju-top-menu-box a>div {
+  font-size: 10px;
+  font-weight: normal;
+ }
+
+ .ju-top-bg-box {
+  position: relative;
+ }
+
+ .ju-top-bg-box__main-txt {
+  position: absolute;
+  top: 17%;
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFF;
+  border-bottom: 5px solid #fded1b;
+  padding-bottom: 10px;
+  left: 32%;
+ }
+
+ .ju-top-bg-box__list {
+  position: absolute;
+  top: 52%;
+  width: 100%;
+ }
+
+ div.ju-top-bg-box__list__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
+ }
+
+ a.ju-top-bg-box__list__inner img {
+  width: 100%;
+ }
+
+ a.ju-top-bg-box__list__inner {
+  width: calc(200 * (100% / 1920));
+  display: block;
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+ }
+
+ a.ju-top-bg-box__list__inner+a.ju-top-bg-box__list__inner {
+  margin-left: 40px;
+ }
+
+ a.ju-top-bg-box__list__inner>div:last-child {
+  margin-top: 10px;
+ }
+
+ .ju-top-bg-box__img-pc,
+ .ju-top-bg-box__img-sp {
+  max-width: 100%;
+ }
+
+ @media(max-width: 767px) {
+  .ju-top-menu-box {
+   margin-top: 0;
+  }
+
+  .ju-top-menu-box a {
+   height: 30px;
+  }
+
+  .ju-top-menu-box {
+   padding: 0 15px 0 0px;
+   min-height: 45px;
+   height: auto;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+  }
+
+  .ju-top-menu-box {
+   font-size: 11px;
+  }
+
+  .ju-top-menu-box__inner {
+   margin-left: 15px;
+  }
+
+  .ju-top-menu-box__inner+.ju-top-menu-box__inner {
+   margin-left: 15px;
+  }
+
+  .ju-top-bg-box__main-txt {
+   top: 4%;
+   left: 12.5%;
+   font-size: 18px;
+   border-bottom: 3px solid #fded1b;
+   padding-bottom: 5px;
+  }
+
+  a.ju-top-bg-box__list__inner {
+   width: calc(290 * (100% / 750));
+  }
+
+  a.ju-top-bg-box__list__inner {
+   margin-left: 0 !important;
+   font-size: 12px;
+  }
+
+  a.ju-top-bg-box__list__inner:nth-child(3),
+  a.ju-top-bg-box__list__inner:nth-child(5),
+  a.ju-top-bg-box__list__inner:nth-child(4) {
+   margin-top: 8px;
+  }
+
+  div.ju-top-bg-box__list__inner {
+   flex-wrap: wrap;
+  }
+
+  .ju-top-bg-box__list {
+   top: 23%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+
+  a.ju-top-bg-box__list__inner>div:last-child {
+   margin-top: 5px;
+  }
+
+  a.ju-top-bg-box__list__inner img {
+   width: 53%;
+  }
+
+
+  .ju-top-bg-box__img-sp {
+   height: 440px;
+   object-fit: cover;
+  }
+ }
+</style>
+
+<div class="ju-top-bg-box">
+ <img class="u-d-sp--on ju-top-bg-box__img-sp" src="/img/top-custom/JUhukushima_img_SP.png">
+ <img class="u-d-sp--off ju-top-bg-box__img-pc" src="/img/top-custom/JUhukushima_img.png">
+ <div class="ju-top-bg-box__main-txt">
+  <div>
+   あなたのお困りごとはなんですか？
+  </div>
+  <div>
+   車のことなら&nbsp;JU&nbsp;で解決できます！
+  </div>
+ </div>
+ <div class="ju-top-bg-box__list">
+  <div class="ju-top-bg-box__list__inner">
+   <a href="https://fukushima.ju-janaito.com/usedcar.html" target="_blank"
+    class="ju-top-bg-box__list__inner u-d-sp--off">
+    <div>
+     <img src="/img/top-custom/buy.png">
+    </div>
+    <div>
+     どんな車を買おうかなあ？
+    </div>
+   </a>
+   <a href="https://fukushima.ju-janaito.com/usedcar/search" target="_blank"
+    class="ju-top-bg-box__list__inner u-d-sp--on">
+    <div>
+     <img src="/img/top-custom/buy.png">
+    </div>
+    <div>
+     どんな車を買おうかなあ？
+    </div>
+   </a>
+   <a href="/digest/category-1/" class="ju-top-bg-box__list__inner">
+    <div>
+     <img src="/img/top-custom/koware.png">
+    </div>
+    <div>
+     車が壊れちゃった！
+    </div>
+   </a>
+   <a href="/digest/category-2/" class="ju-top-bg-box__list__inner">
+    <div>
+     <img src="/img/top-custom/butuke.png">
+    </div>
+    <div>
+     車ぶつけちゃった！
+    </div>
+   </a>
+   <a href="/digest/category-3/" class="ju-top-bg-box__list__inner">
+    <div>
+     <img src="/img/top-custom/karitai.png">
+    </div>
+    <div>
+     週末車借りたいな♪
+    </div>
+   </a>
+   <a href="/digest/category-4/" class="ju-top-bg-box__list__inner">
+    <div>
+     <img src="/img/top-custom/donna.png">
+    </div>
+    <div>
+     クルマを売りたい！
+    </div>
+   </a>
+  </div>
+ </div>
+</div>

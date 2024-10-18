@@ -2,10 +2,15 @@
 
 .c-label {
   padding: 4px 12px;
-  font-size: 14px;
+  font-size: var.fs(12, 14);
   color: #fff;
   border-radius: 4px;
   background-color: var(--color-main);
+
+  @include var.mq(max, sp) {
+    padding: 2px 8px;
+    border-radius: 0;
+  }
 
   &.is-absolute {
     position: absolute;

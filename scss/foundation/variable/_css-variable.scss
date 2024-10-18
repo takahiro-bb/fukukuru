@@ -37,4 +37,8 @@
 
   // ナビゲーション高さ（上書き）
   --header-H: 90px;
+
+  @media (max-width: 820px) {
+    --header-H: 64px;
+  }
 }
