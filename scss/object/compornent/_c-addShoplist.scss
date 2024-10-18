@@ -1,0 +1,54 @@
+@use "../../import" as var;
+
+.c-addShoplist {
+  &__ttl {
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px 6px 0 !important;
+
+      @include var.mq(max, tb) {
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+        padding-bottom: 12px !important;
+      }
+    }
+  }
+
+  &__icon {
+    color: #333 !important;
+  }
+
+  &__btn {
+    display: flex;
+    margin-top: 20px;
+
+    @include var.mq(max, tb) {
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      width: 25% !important;
+      margin-top: 0;
+
+      @include var.mq(max, tb) {
+        width: 30% !important;
+      }
+
+      a {
+        width: 100% !important;
+        height: 30px !important;
+      }
+    }
+
+    &-on {
+        background: var(--color-main);
+      }
+
+      &-off {
+        background: #ccc !important;
+        border: solid 1px #ccc !important;
+      }
+  }
+}
