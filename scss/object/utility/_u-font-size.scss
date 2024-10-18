@@ -51,6 +51,10 @@
     line-height: 1.4;
   }
 
+  &--15_14 {
+    font-size: var.fs(15, 14);
+  }
+
   &--15_18 {
     font-size: var.fs(15, 18);
   }
@@ -91,11 +95,6 @@
     font-size: var.fs(43, 60);
   }
 
-}
-
-[class*="u-fs--"] {
-  font-weight: 500;
-  transform: rotate(0.05deg);
 }
 
 .u-number--big {

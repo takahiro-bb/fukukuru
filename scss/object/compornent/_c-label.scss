@@ -1,0 +1,18 @@
+@use "../../import" as var;
+
+.c-label {
+  padding: 4px 12px;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  background-color: var(--color-main);
+
+  &.is-absolute {
+    position: absolute;
+    z-index: 10;  
+  }
+}
+
+*:has(>.is-absolute) {
+  position: relative;
+}
