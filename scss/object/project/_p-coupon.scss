@@ -11,6 +11,26 @@
   width: calc((100% - 72px) / 4);
   border: 1px solid var(--color-border);
 
+  @include var.mq(max, tb_min) {
+   width: calc((100% - 48px) / 3);
+  }
+
+  @include var.mq(max, sp) {
+   display: flex;
+   width: 100%;
+  }
+
+  .is-shop & {
+   width: calc((100% - 48px) / 3);
+  }
+
+  a:not(.c-btn) {
+   @include var.mq(max, sp) {
+    display: block;
+    width: 40%;
+   }
+  }
+
   figure {
    position: relative;
    display: flex;
@@ -19,6 +39,15 @@
    padding-inline: 12px;
    overflow: hidden;
    aspect-ratio: 280/115;
+
+   @include var.mq(max, tb_min) {
+    aspect-ratio: 3/2;
+   }
+
+   @include var.mq(max, sp) {
+    height: 100%;
+    aspect-ratio: 0;
+   }
 
    img {
     position: absolute;
@@ -51,6 +80,15 @@
   align-items: center;
   gap: 16px;
   padding: 16px 20px;
+
+  @include var.mq(max, tb_min) {
+   padding: 8px;
+  }
+
+  @include var.mq(max, sp) {
+   gap: 8px;
+   width: 60%;
+  }
  }
 
  &-term {

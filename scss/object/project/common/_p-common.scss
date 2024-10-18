@@ -16,3 +16,22 @@ a {
 .p-header {
     height: var(--header-H);
 }
+
+// お気に入り
+.p-news-radio#news-coupon:checked ~ .p-news__tab #tab-news-coupon {
+    background-color: var(--color-main);
+    color: #fff;
+}
+.p-news-radio#news-coupon:checked ~ .p-news__area #area-news-coupon {
+    display: block;
+}
+.p-news-radio#news-coupon:checked ~ .p-news__area .p-news__content {
+    animation: displayAnime cubic-bezier(0.23, 1, 0.32, 1) 0.8s forwards;
+}
+
+// 
+@media (min-width: 601px) {
+    .p-searchResultsSection {
+        justify-content: space-between;
+    }
+}

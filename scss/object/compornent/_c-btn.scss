@@ -60,4 +60,44 @@
       background-color: var(--color-main);
     }
   }
+
+  &.is-fav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 256px;
+    height: 48px;
+    padding: 10px;
+    margin-top: 0;
+    border-radius: 8px;
+    border: 2px solid var(--color-orange);
+    cursor: pointer;
+    transition: cubic-bezier(0.23, 1, 0.32, 1) 0.2s;
+  
+    &::before {
+      content: "★ お気に入りに追加";
+      color: var(--color-orange);
+    }
+
+    &.is-checked {
+      background-color: var(--color-gray);
+      border: 2px solid var(--color-gray);
+
+      &::before {
+        content: "お気に入りに追加済み";
+        color: #fff;
+      }
+    }
+
+    .p-searchResultsSide & {
+      max-width: 152px;
+      height: 30px;
+      margin-bottom: 32px;
+
+      &::before {
+        font-size: 12px;
+      }
+    }
+  }
 }

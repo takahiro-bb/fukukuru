@@ -15,6 +15,15 @@
   width: calc((100% - 48px) / 3);
   padding: 16px;
   border: 1px solid var(--color-border);
+
+  @include var.mq(max, sp) {
+   width: 100%;
+  }
+
+  .is-shop & {
+   align-items: flex-start;
+   width: 100%;
+  }
  }
 
  &__heading {
@@ -22,6 +31,20 @@
   font-size: var.fs(15, 16);
   font-weight: 600;
   border-bottom: 1px solid var(--color-border);
+
+  @include var.mq(max, tb) {
+   padding-bottom: 0;
+  }
+
+  @include var.mq(max, sp) {
+   padding-bottom: 4px;
+  }
+
+  .is-shop & {
+   width: 100%;
+   padding-bottom: 0;
+   border-bottom: none;
+  }
  }
 
  &__info {
@@ -69,6 +92,19 @@
   &-count {
    margin-left: 8px;
    color: #fa6180;
+
+   .is-shop & {
+    padding: 4px 8px;
+    margin-inline: 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+   }
+
+   &--no {
+    margin-left: 4px;
+   }
   }
  }
 }
