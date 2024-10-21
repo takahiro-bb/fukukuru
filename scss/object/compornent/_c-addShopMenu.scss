@@ -9,19 +9,8 @@
   overflow: visible;
   margin: 40px 0 0 0;
 
-  &__wrapper {
-    display: flex;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0 30px;
-    list-style: none;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    margin: 0;
-    padding: 0 30px;
-    list-style: none;
-    transition: transform 0.3s ease-in-out;
+  @include var.mq(max, sp) {
+    margin: 16px 0 0 0;
   }
 
   &__con {
@@ -33,13 +22,31 @@
     overflow-x: clip;
   }
 
+  &__wrapper {
+    display: flex;
+    margin: 0;
+    padding: 0 30px;
+    width: 100%;
+    height: auto;
+    list-style: none;
+    transition: transform 0.3s ease-in-out;
+
+    @include var.mq(max, sp) {
+    flex-wrap: wrap;
+    gap:0;
+    }
+  }
+
   &__item {
     position: relative;
     min-width: 200px;
     height: 50px;
     display: inline-block;
     flex-grow: 1;
-   
+
+    @include var.mq(max, sp) {
+      min-width: 48%;
+      }
 
     &-link {
       font-size: 16px;
@@ -49,6 +56,10 @@
       font-size: 16px;
       font-weight: bold;
       padding: 10px;
+
+      @include var.mq(max, sp) {
+        font-size: 12px;
+        }
     }
 
     &-child {
@@ -135,6 +146,10 @@
     font-size: 12px;
     height: 50px;
     z-index: 20;
+
+    @include var.mq(max, sp) {
+      display: none;
+    }
 
     &-left {
       position: absolute;

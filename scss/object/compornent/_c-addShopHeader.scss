@@ -1,11 +1,25 @@
 @use "../../import" as var;
 
 .c-addShopHeader {
-  &-fav {
+  &__ttl {
+
+    @include var.mq(max, sp) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__fav {
     position: absolute;
     top: 0;
     right: 0;
     width: fit-content;
+
+    @include var.mq(max, sp) {
+      position: static;
+    }
 
     span {
       font-size: 14px;
@@ -13,11 +27,7 @@
     }
   }
 
-  &-logo {
+  &__logo {
     width: fit-content;
   }
 }
-
-
-
-
