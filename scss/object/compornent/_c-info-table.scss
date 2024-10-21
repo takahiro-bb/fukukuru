@@ -1,0 +1,53 @@
+@use "../../import" as var;
+
+.c-info-table {
+  width: 100%;
+  border-top: 1px solid var(--color-border);
+
+  @include var.mq(max, tb_min) {
+    border-top: none;
+  }
+
+  th,
+  td {
+    padding: 16px;
+    font-size: 14px;
+    text-align: left;
+    vertical-align: middle;
+    word-break: break-all;
+
+    @include var.mq(max, tb_min) {
+      display: block;
+      padding: 8px;
+    }
+  }
+
+  tr {
+    border-bottom: 1px solid var(--color_border);
+
+    @include var.mq(max, tb_min) {
+      display: flex;
+      flex-direction: column;
+      border-bottom: none;
+    }
+  }
+
+  th {
+    width: 25%;
+    font-weight: 500;
+    background-color: var(--color_gray3);
+
+    @include var.mq(max, tb_min) {
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+
+  td {
+    width: 75%;
+
+    @include var.mq(max, tb_min) {
+      width: 100%;
+    }
+  }
+}

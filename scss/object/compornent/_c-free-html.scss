@@ -1,0 +1,15 @@
+@use "../../import" as var;
+
+.c-free-html {
+  margin-bottom: 72px;
+  font-size: 14px;
+
+  * {
+    font-size: 14px;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

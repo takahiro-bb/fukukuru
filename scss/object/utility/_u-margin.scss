@@ -29,9 +29,19 @@
     &0 {
       margin-bottom: 0;
     }
+
+    &0_16 {
+      margin-bottom: 16px;
+
+      @include var.mq(max, sp) {
+        margin-bottom: 0;
+      }
+    }
+
     &8 {
       margin-bottom: 8px;
     }
+
     &14 {
       margin-bottom: 14px;
     }
@@ -94,6 +104,14 @@
 
     &32_64 {
       margin-bottom: 64px !important;
+
+      @include var.mq(max, sp) {
+        margin-bottom: 32px !important;
+      }
+    }
+
+    &32_88 {
+      margin-bottom: 88px !important;
 
       @include var.mq(max, sp) {
         margin-bottom: 32px !important;
