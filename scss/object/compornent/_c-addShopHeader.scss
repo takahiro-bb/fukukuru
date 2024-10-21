@@ -1,0 +1,23 @@
+@use "../../import" as var;
+
+.c-addShopHeader {
+  &-fav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: fit-content;
+
+    span {
+      font-size: 14px;
+      padding: 5px 8px !important;
+    }
+  }
+
+  &-logo {
+    width: fit-content;
+  }
+}
+
+
+
+

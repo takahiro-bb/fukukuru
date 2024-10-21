@@ -1,0 +1,170 @@
+@use "../../import" as var;
+
+.c-addShopMenu {
+  display: flex;
+  width: 94%;
+
+  &__item {
+    position: relative;
+    flex-grow: 1;
+
+    &-link {
+      font-size: 16px;
+      width: 95%;
+    }
+
+    &-child {
+      position: absolute;
+      left: 0;
+      top: 62px;
+      z-index: 4;
+      /*形状を指定*/
+      background: #28bfe7;
+      width: 180px;
+      /*はじめは非表示*/
+      visibility: hidden;
+      opacity: 0;
+      /*アニメーション設定*/
+      transition: all 0.3s;
+    }
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: #ccc;
+  }
+}
+
+/* メニュー全体のコンテナ */
+.menu-con {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  justify-content: center;
+}
+
+/* メニュースライダー部分 */
+.menu-wrapper {
+  white-space: nowrap;
+  flex-grow: 1;
+  display: flex;
+  scroll-behavior: smooth;
+  position: relative;
+  overflow-x: hidden; /* スクロール部分のみ隠す */
+}
+
+/* メニューのスタイル */
+.menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu li {
+  display: inline-block;
+  padding: 16px;
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* ドロップダウンメニューのスタイル */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* ドロップダウンが他の要素より前に表示されるように */
+  top: 100%; /* ドロップダウンを親メニューの下に表示 */
+  left: 0;
+}
+
+/* ドロップダウンをホバー時に表示 */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ドロップダウンのリンクスタイル */
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* 左右ボタンのスタイル */
+.slide-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 20; /* ボタンを常に最前面に表示 */
+}
+
+.left-btn {
+  position: absolute;
+  left: 0;
+}
+
+.right-btn {
+  position: absolute;
+  right: 0;
+}
+
+/* ボタンが表示されるように設定 */
+.menu-container:hover .slide-btn {
+  visibility: visible;
+}
+
+.dropdown-content li a {
+  color: white;
+  padding: 10px;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.scroll-button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.scroll-button:hover {
+  background-color: #555;
+}
+
+.left-button {
+  position: absolute;
+  left: 10px;
+}
+
+.right-button {
+  position: absolute;
+  right: 10px;
+}
