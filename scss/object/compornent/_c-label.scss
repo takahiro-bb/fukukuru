@@ -7,6 +7,14 @@
   border-radius: 4px;
   background-color: var(--color-main);
 
+  .c-label__list--job & {
+    padding-block: 8px;
+    color: #000;
+    background-color: var(--color_gray3);
+    border: 1px solid var(--color_border);
+    border-radius: 4px;
+  }
+
   @include var.mq(max, sp) {
     padding: 2px 8px;
     border-radius: 0;
@@ -14,7 +22,16 @@
 
   &.is-absolute {
     position: absolute;
-    z-index: 10;  
+    z-index: 10;
+  }
+
+  &__list {
+    &--job {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
   }
 }
 
