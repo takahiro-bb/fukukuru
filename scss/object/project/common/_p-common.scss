@@ -17,6 +17,10 @@ a {
     height: var(--header-H);
 }
 
+.c-addShopMenu__wrapper {
+    gap: 0;
+}
+
 // お気に入り
 .p-news-radio#news-coupon:checked ~ .p-news__tab #tab-news-coupon {
     background-color: var(--color-main);

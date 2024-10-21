@@ -566,6 +566,10 @@ a:hover {
   height: var(--header-H);
 }
 
+.c-addShopMenu__wrapper {
+  gap: 0;
+}
+
 .p-news-radio#news-coupon:checked ~ .p-news__tab #tab-news-coupon {
   background-color: var(--color-main);
   color: #fff;
