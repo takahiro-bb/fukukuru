@@ -2,15 +2,53 @@
 
 .c-addShopMenu {
   display: flex;
-  width: 94%;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+  justify-content: center;
+  overflow: visible;
+  margin: 40px 0 0 0;
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0 30px;
+    list-style: none;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    margin: 0;
+    padding: 0 30px;
+    list-style: none;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__con {
+    white-space: nowrap;
+    flex-grow: 1;
+    display: flex;
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-x: clip;
+  }
 
   &__item {
     position: relative;
+    min-width: 200px;
+    height: 50px;
+    display: inline-block;
     flex-grow: 1;
+   
 
     &-link {
       font-size: 16px;
       width: 95%;
+      text-decoration: none;
+      color: var(--color-main);
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px;
     }
 
     &-child {
@@ -18,153 +56,102 @@
       left: 0;
       top: 62px;
       z-index: 4;
-      /*形状を指定*/
       background: #28bfe7;
       width: 180px;
-      /*はじめは非表示*/
       visibility: hidden;
       opacity: 0;
-      /*アニメーション設定*/
       transition: all 0.3s;
     }
   }
 
-  .slick-prev:before,
-  .slick-next:before {
-    color: #ccc;
+  &__subMenu {
+    a {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 1em 0;
+      background-color: #fff;
+      color: var(--color-main);
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    &-item {
+      position: absolute;
+      width: 100%;
+      display: none;
+      display: inline-block;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        font-weight: normal;
+        padding: 10px;
+      }
+    }
   }
-}
 
-/* メニュー全体のコンテナ */
-.menu-con {
-  display: flex;
-  align-items: center;
-  position: relative;
-  max-width: 100%;
-  overflow: hidden;
-  justify-content: center;
-}
+  &__dropdown {
+    &-con {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      top: 100%;
+      left: 0;
 
-/* メニュースライダー部分 */
-.menu-wrapper {
-  white-space: nowrap;
-  flex-grow: 1;
-  display: flex;
-  scroll-behavior: smooth;
-  position: relative;
-  overflow-x: hidden; /* スクロール部分のみ隠す */
-}
+      a {
+        display: block;
+        padding: 12px 16px;
+        color: #333;
+        text-decoration: none;
 
-/* メニューのスタイル */
-.menu {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  transition: transform 0.3s ease-in-out;
-}
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
 
-.menu li {
-  display: inline-block;
-  padding: 16px;
-  position: relative;
-}
+    &:hover {
+      .c-addShopMenu__dropdown-con {
+        display: flex !important;
+        flex-direction: column;
+      }
+    }
+  }
 
-.menu a {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  padding: 10px;
-}
+  &__slideBtn {
+    background-color: #d9d9d9;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    height: 50px;
+    z-index: 20;
 
-/* ドロップダウンメニューのスタイル */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #333;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 10; /* ドロップダウンが他の要素より前に表示されるように */
-  top: 100%; /* ドロップダウンを親メニューの下に表示 */
-  left: 0;
-}
+    &-left {
+      position: absolute;
+      left: 0;
 
-/* ドロップダウンをホバー時に表示 */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+      &:before {
+        content: "◀";
+      }
+    }
 
-/* ドロップダウンのリンクスタイル */
-.dropdown-content a {
-  display: block;
-  padding: 12px 16px;
-  color: #333;
-  text-decoration: none;
-}
+    &-right {
+      position: absolute;
+      right: 0;
 
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* 左右ボタンのスタイル */
-.slide-btn {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 20px;
-  z-index: 20; /* ボタンを常に最前面に表示 */
-}
-
-.left-btn {
-  position: absolute;
-  left: 0;
-}
-
-.right-btn {
-  position: absolute;
-  right: 0;
-}
-
-/* ボタンが表示されるように設定 */
-.menu-container:hover .slide-btn {
-  visibility: visible;
-}
-
-.dropdown-content li a {
-  color: white;
-  padding: 10px;
-  display: block;
-}
-
-.dropdown-content li a:hover {
-  background-color: #555;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.scroll-button {
-  background-color: #444;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.scroll-button:hover {
-  background-color: #555;
-}
-
-.left-button {
-  position: absolute;
-  left: 10px;
-}
-
-.right-button {
-  position: absolute;
-  right: 10px;
+      &:before {
+        content: "▶";
+      }
+    }
+  }
 }
