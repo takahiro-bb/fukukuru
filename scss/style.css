@@ -121,7 +121,6 @@
 }
 .c-addShopMenu__item {
   position: relative;
-  min-width: 200px;
   height: 50px;
   display: inline-block;
   flex-grow: 1;
@@ -139,6 +138,7 @@
   font-size: 16px;
   font-weight: bold;
   padding: 10px;
+  cursor: pointer;
 }
 @media screen and (max-width: 600px) {
   .c-addShopMenu__item-link {
@@ -154,85 +154,63 @@
   width: 180px;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.3s;
+  transition: all 2s;
 }
-.c-addShopMenu__subMenu a {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  padding: 1em 0;
-  background-color: #fff;
-  color: var(--color-main);
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-}
-.c-addShopMenu__subMenu-item {
-  position: absolute;
-  width: 100%;
-  display: none;
-  display: inline-block;
-  position: relative;
-}
-.c-addShopMenu__subMenu-item a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  font-weight: normal;
-  padding: 10px;
-}
-.c-addShopMenu__dropdown-con {
+.c-addShopMenu__dropdown-menu {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-  top: 100%;
-  left: 0;
+  left: -5px;
+  top: auto;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  z-index: 100;
 }
-.c-addShopMenu__dropdown-con a {
-  display: block;
-  padding: 12px 16px;
-  color: #333;
-  text-decoration: none;
-}
-.c-addShopMenu__dropdown-con a:hover {
-  background-color: #ddd;
-}
-.c-addShopMenu__dropdown:hover .c-addShopMenu__dropdown-con {
-  display: flex !important;
+.c-addShopMenu__dropdown-menu.active {
+  display: flex;
   flex-direction: column;
 }
-.c-addShopMenu__slideBtn {
-  background-color: #d9d9d9;
-  color: white;
-  border: none;
-  padding: 5px;
-  cursor: pointer;
-  font-size: 12px;
-  height: 50px;
-  z-index: 20;
+.c-addShopMenu__dropdown-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
 }
-@media screen and (max-width: 600px) {
-  .c-addShopMenu__slideBtn {
-    display: none;
-  }
+.c-addShopMenu__dropdown-item:last-child {
+  border-bottom: none;
 }
-.c-addShopMenu__slideBtn-left {
-  position: absolute;
-  left: 0;
+.c-addShopMenu__dropdown-item:hover {
+  background-color: #eee;
 }
-.c-addShopMenu__slideBtn-left:before {
-  content: "◀";
+.c-addShopMenu__dropdown-item a {
+  padding: 10px 15px;
 }
-.c-addShopMenu__slideBtn-right {
-  position: absolute;
-  right: 0;
+.c-addShopMenu .slick-slider .slick-list,
+.c-addShopMenu .slick-slider .slick-track {
+  overflow: visible !important;
 }
-.c-addShopMenu__slideBtn-right:before {
-  content: "▶";
+.c-addShopMenu .slick-prev,
+.c-addShopMenu .slick-next {
+  background-color: #d9d9d9 !important;
+  z-index: 999;
+  height: 60px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.c-addShopMenu .slick-prev {
+  left: 0 !important;
+}
+.c-addShopMenu .slick-next {
+  right: 0 !important;
+}
+.c-addShopMenu .slick-prev:before {
+  content: "◀" !important;
+}
+.c-addShopMenu .slick-next:before {
+  content: "▶" !important;
+}
+.c-addShopMenu .slick-prev:before,
+.c-addShopMenu .slick-next:before {
+  font-size: 14px !important;
 }
 
 @media screen and (max-width: 600px) {
