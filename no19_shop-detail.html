@@ -52,6 +52,14 @@
   <link rel="stylesheet" href="./scss/style.css" type="text/css" />
   <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png?10240427">
   <link rel="stylesheet" href="/css/customize.css">
+
+
+  <!-- shopmenu用のslick-carouselリンク -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 
@@ -90,7 +98,7 @@
             </h1>
 
             <!------------------------------
-             お気に入りボタン（店舗詳細TOP以外は取る） 
+             お気に入りボタン（店舗詳細TOP以外は取ってください） 
              ------------------------------------>
             <div class="p-shopDetail__fav c-addShopHeader__fav" id="favorite_box_shop_2194">
               <span class="p-shopDetail__fav-item"
@@ -110,10 +118,10 @@
           </div>
 
           <div class="menu-con c-addShopMenu">
-            <div class="menu-wrapper c-addShopMenu__con">
+            <div class="menu-wrapper c-addShopMenu__con ">
               <button class="c-addShopMenu__slideBtn c-addShopMenu__slideBtn-left js-leftBtn"></button>
 
-              <ul class="o-storeHead__tab c-addShopMenu__wrapper js-shopmenu">
+              <ul class="o-storeHead__tab c-addShopMenu__wrapper js-shopmenu js-slickMenu">
 
                 <li class="o-storeHead__tab-item c-addShopMenu__item dropdown js-shopmenuItem">
                   <a class="o-storeHead__tab-link active c-addShopMenu__item-link" href="">
@@ -128,11 +136,12 @@
                 </li>
 
                 <!-- ニュース　下層あり -->
-                <li class="o-storeHead__tab-item c-addShopMenu__item nav-menu js-shopmenuItem c-addShopMenu__dropdown js-dropdown">
-                  <a class="o-storeHead__tab-link c-addShopMenu__item-link" href="">
+                <li
+                  class="o-storeHead__tab-item c-addShopMenu__item nav-menu js-shopmenuItem c-addShopMenu__dropdown js-dropdown">
+                  <span class="o-storeHead__tab-link c-addShopMenu__item-link">
                     ニュース
-                  </a>
-                  <ul class="menu-list c-addShopMenu__dropdown-menu js-dropdown-menu">
+                  </span>
+                  <ul class="c-addShopMenu__dropdown-menu js-dropdown-menu">
                     <li class="c-addShopMenu__dropdown-item"><a href="#">ニュース１</a></li>
                     <li class="c-addShopMenu__dropdown-item"><a href="#">ニュース２</a></li>
                     <li class="c-addShopMenu__dropdown-item"><a href="#">ニュース３</a></li>
@@ -157,11 +166,12 @@
                 </li>
 
                 <!-- フリーページ　下層あり -->
-                <li class="o-storeHead__tab-item c-addShopMenu__item nav-menu js-shopmenuItem c-addShopMenu__dropdown js-dropdown">
-                  <a class="o-storeHead__tab-link c-addShopMenu__item-link" href="">
+                <li
+                  class="o-storeHead__tab-item c-addShopMenu__item nav-menu js-shopmenuItem c-addShopMenu__dropdown js-dropdown">
+                  <span class="o-storeHead__tab-link c-addShopMenu__item-link">
                     フリーページ
-                  </a>
-                  <ul class="menu-list c-addShopMenu__dropdown-menu js-dropdown-menu">
+                  </span>
+                  <ul class="c-addShopMenu__dropdown-menu js-dropdown-menu">
                     <li class="c-addShopMenu__dropdown-item"><a href="#">フリーページ１</a></li>
                     <li class="c-addShopMenu__dropdown-item"><a href="#">フリーページ２</a></li>
                     <li class="c-addShopMenu__dropdown-item"><a href="#">フリーページ３</a></li>
@@ -169,13 +179,13 @@
                     <li class="c-addShopMenu__dropdown-item"><a href="#">フリーページ５</a></li>
                   </ul>
                 </li>
-                 <!-- フリーページ　終わり -->
+                <!-- フリーページ　終わり -->
                 <li class="o-storeHead__tab-item c-addShopMenu__item js-shopmenuItem">
                   <a class="o-storeHead__tab-link c-addShopMenu__item-link" href="">
                     フォト
                   </a>
                 </li>
-               
+
               </ul>
 
               <button class="c-addShopMenu__slideBtn c-addShopMenu__slideBtn-right js-rightBtn"></button>
@@ -230,10 +240,15 @@
     <script src="http://fukukuru.b-cube-5.linux/usedcar/vendor/slick/slick.min.js"></script>
     <script src="/js/trunk8.js"></script>
 
-    <!-- 店舗詳細ヘッダーメニュー用 script -->
+    
+    <!---------------------------
+     店舗詳細ヘッダーメニュー用 script 
+     ---------------------------------->
     <script src="./js/shopmenu.js"></script>
 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
 
     <script>
       $(function () {

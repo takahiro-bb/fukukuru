@@ -39,7 +39,7 @@
 
   &__item {
     position: relative;
-    min-width: 200px;
+    // min-width: 200px;
     height: 50px;
     display: inline-block;
     flex-grow: 1;
@@ -56,6 +56,7 @@
       font-size: 16px;
       font-weight: bold;
       padding: 10px;
+      cursor: pointer;
 
       @include var.mq(max, sp) {
         font-size: 12px;
@@ -79,10 +80,15 @@
     &-menu {
       display: none;
       position: absolute;
-      left: 0;
-      top: 50px;
+      left: -5px;
+      top: auto;
       width: 100%;
       border: 1px solid #ccc;
+      background: #fff;
+      z-index: 100;
+
+      @include var.mq(max, sp) {
+      }
 
       &.active {
         display: flex;
@@ -107,36 +113,39 @@
     }
   }
 
-  &__slideBtn {
-    background-color: #d9d9d9;
-    color: white;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-    font-size: 12px;
-    height: 50px;
-    z-index: 20;
+  .slick-slider .slick-list,
+  .slick-slider .slick-track {
+    overflow: visible !important;
+  }
 
-    @include var.mq(max, sp) {
-      display: none;
-    }
+  .slick-prev,
+  .slick-next {
+    background-color: #d9d9d9 !important;
+    z-index: 999;
+    height: 60px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
 
-    &-left {
-      position: absolute;
-      left: 0;
+  .slick-prev {
+    left: 0 !important;
+  }
 
-      &:before {
-        content: "◀";
-      }
-    }
+  .slick-next {
+    right: 0 !important;
+  }
 
-    &-right {
-      position: absolute;
-      right: 0;
+  .slick-prev:before {
+    content: "◀" !important;
+  }
 
-      &:before {
-        content: "▶";
-      }
-    }
+  .slick-next:before {
+    content: "▶" !important;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 14px !important;
   }
 }
