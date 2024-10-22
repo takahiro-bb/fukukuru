@@ -1,5 +1,5 @@
 const menu = document.querySelector('.js-shopmenu');
-const menuItems = Array.from(document.querySelectorAll('.js-shopmenu li'));
+const menuItems = Array.from(document.querySelectorAll('.js-shopmenuItem'));
 let currentIndex = 0; 
 
 // 現在のインデックス
@@ -46,7 +46,8 @@ initializeMenu();
 
 // ドロップダウン
 $(function() {
-  $('.js-shopmenu').hover(function() {
-    $(this).children('.js-shopSubmenu').stop().slideToggle(500);
+  $('.js-dropdown').hover(function() {
+    $(this).children('.js-dropdown-menu').stop().slideToggle(); 
   });
+  $(this).toggleClass("active");
 });
